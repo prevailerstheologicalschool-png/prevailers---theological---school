@@ -1,18 +1,240 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Prevailers Theological School — flexible, affordable and effective theological education. FCT Abuja, Nigeria."><title>Prevailers Theological School</title><link rel="icon" href="assets/logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Prevailers Theological School — flexible, affordable and effective theological education.">
+<title>Prevailers Theological School | FCT Abuja, Nigeria</title>
+<style>
+:root{--navy:#082653;--blue:#0e3b78;--red:#d71920;--green:#6da916;--gold:#f1c40f;--ink:#172033;--muted:#667085;--light:#f6f8fb;--white:#fff}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+.top{background:var(--navy);color:#fff;font-size:.9rem}
+.top .container{display:flex;justify-content:space-between;gap:12px;padding:9px 0;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 3px 18px #00000014}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand img{width:54px;height:54px;object-fit:cover;border-radius:8px}
+.brand strong{display:block;color:var(--navy);font-size:1.02rem;line-height:1.15}
+.brand small{color:var(--muted)}
+nav{display:flex;gap:20px;align-items:center}
+nav a{font-weight:700;color:var(--navy);font-size:.94rem}
+nav a:hover{color:var(--red)}
+.menu{display:none;border:0;background:var(--navy);color:#fff;border-radius:8px;padding:10px 13px;font-size:1.25rem;cursor:pointer}
+.hero{background:linear-gradient(115deg,var(--navy),var(--blue));color:#fff;padding:78px 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
+.eyebrow{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:7px 14px;border-radius:999px}
+h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.02;margin:18px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:1.15rem;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 20px;border-radius:8px;font-weight:800}
+.primary{background:var(--red);color:#fff}
+.secondary{border:2px solid #fff;color:#fff}
+.poster{background:#fff;padding:10px;border-radius:18px;box-shadow:0 20px 55px #0005}
+section{padding:76px 0}
+.light{background:var(--light)}
+.heading{text-align:center;max-width:780px;margin:0 auto 42px}
+.heading h2{font-size:2.35rem;line-height:1.15;color:var(--navy);margin:0 0 10px}
+.heading p{color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-card{background:#fff;border-radius:16px;padding:30px;box-shadow:0 12px 35px #08265318}
+.about-card h3{color:var(--navy);margin-top:0}
+.callout{border-left:5px solid var(--green);padding-left:18px;font-weight:700;color:var(--navy)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{padding:27px;background:#fff;border-radius:15px;box-shadow:0 10px 30px #08265312;border-top:4px solid var(--gold)}
+.card h3{color:var(--navy);margin-top:0}
+.programmes{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.programme{background:var(--navy);color:#fff;border-radius:14px;padding:22px;box-shadow:0 10px 25px #08265318}
+.programme h3{color:var(--gold);margin-top:0}
+.programme li{margin:6px 0}
+.quote{background:linear-gradient(120deg,var(--navy),#0c477f);color:#fff;text-align:center}
+.quote h2{color:#fff;font-size:2.3rem;margin:0 0 8px}
+.admission-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}
+.formbox{background:#fff;padding:28px;border-radius:16px;box-shadow:0 12px 35px #08265318}
+label{display:block;font-weight:700;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #ccd4df;border-radius:8px;font:inherit}
+textarea{min-height:120px;resize:vertical}
+.formbox button{border:0;cursor:pointer;margin-top:16px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gallery img{width:100%;height:360px;object-fit:cover;border-radius:15px;box-shadow:0 10px 30px #0001}
+.contact{background:#eef4e6}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.contact-card{background:#fff;border-radius:15px;padding:25px;box-shadow:0 10px 30px #08265312}
+.contact-card h3{color:var(--navy)}
+.wa{position:fixed;right:18px;bottom:18px;background:#159447;color:#fff;padding:13px 17px;border-radius:999px;font-weight:800;box-shadow:0 8px 25px #0003;z-index:1100}
+footer{background:#06172d;color:#dbe4ef;padding:42px 0 18px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer h3{color:var(--gold)}
+footer a{color:#fff}
+.copy{border-top:1px solid #ffffff25;margin-top:28px;padding-top:15px;text-align:center;font-size:.9rem}
+@media(max-width:950px){
+ nav{display:none;position:absolute;left:4%;right:4%;top:78px;background:#fff;padding:16px;box-shadow:0 12px 25px #0002;border-radius:0 0 12px 12px;flex-direction:column;align-items:stretch;gap:0}
+ nav.open{display:flex}
+ nav a{padding:12px;border-bottom:1px solid #eef1f5}
+ .menu{display:block}
+ .hero-grid,.about-grid,.admission-grid{grid-template-columns:1fr}
+ .programmes{grid-template-columns:repeat(2,1fr)}
+ .cards,.contact-grid{grid-template-columns:1fr 1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .top .container{justify-content:center;text-align:center}
+ .brand strong{font-size:.88rem}
+ .brand small{font-size:.75rem}
+ .hero{padding:55px 0}
+ section{padding:58px 0}
+ .programmes,.cards,.gallery,.contact-grid,.footer-grid{grid-template-columns:1fr}
+ .gallery img{height:auto}
+ h1{font-size:3rem}
+ .actions .btn{width:100%;text-align:center}
+ .poster{margin-top:10px}
+}
+</style>
+</head>
 <body>
-<header class="top"><a class="brand" href="#home"><img src="assets/logo.png" alt="Prevailers Theological School logo"><span><b>PREVAILERS</b><small>THEOLOGICAL SCHOOL</small></span></a><button class="menu" aria-label="Open menu">☰</button><nav><a href="#about">About</a><a href="#programmes">Programmes</a><a href="#leadership">Leadership</a><a href="#campus">Campus</a><a href="#contact">Contact</a><a class="nav-cta" href="#admission">Admission</a></nav></header>
+<div class="top"><div class="container"><span>PREVAILERS THEOLOGICAL SCHOOL • Open & Distance Learning</span><span>Admissions: <strong>07038544001</strong></span></div></div>
+
+<header>
+<div class="container nav">
+<a class="brand" href="#home">
+<img src="assets/logo.png" alt="Prevailers Theological School logo">
+<span><strong>PREVAILERS THEOLOGICAL SCHOOL</strong><small>Be the Light, in the Darkness</small></span>
+</a>
+<button class="menu" aria-label="Open navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav>
+<a href="#home">Home</a><a href="#about">About</a><a href="#programmes">Programmes</a>
+<a href="#admissions">Admissions</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
 <main>
-<section id="home" class="hero"><div class="hero-copy"><div class="eyebrow">FCT ABUJA • NIGERIA</div><h1>Developing<br><em>Christian Leaders</em></h1><p>Flexible, affordable and effective theological education for people called to serve God, the Church and society.</p><div class="actions"><a class="btn primary" href="#admission">Admission Now Open</a><a class="btn ghost" href="#programmes">Explore Programmes</a></div><div class="stats"><div><strong>2023</strong><span>Established</span></div><div><strong>ODL</strong><span>Flexible Learning</span></div><div><strong>Ph.D.</strong><span>Doctoral Studies</span></div></div></div><div class="hero-art"><img src="assets/admission-poster.png" alt="Prevailers Theological School admission poster"></div></section>
-<section id="about" class="section intro"><div><span class="kicker">WHO WE ARE</span><h2>A school for faith, truth, excellence and service.</h2></div><div class="intro-text"><p>Prevailers Theological School is an open and distance learning institution dedicated to accessible theological education, Christian leadership development, research and practical ministry preparation.</p><p>Established on <b>22 December 2023</b>, the School exists to provide greater opportunities for people aspiring to acquire sound theological knowledge and prepare for effective Christian service.</p></div></section>
-<section class="vision"><div class="quote"><span>“</span><h2>Be the Light,<br>in the Darkness</h2><p>Our vision is to produce Christian leaders who build the Body of Christ and shine as light in the present age.</p></div><div class="pillars"><article><b>VISION</b><p>Produce Christian leaders and expand access to sound theological knowledge.</p></article><article><b>MISSION</b><p>Raise a God-fearing generation committed to serving humanity through teaching, research and manpower development.</p></article><article><b>FOCUS</b><p>Biblical scholarship, leadership, pastoral preparation, counseling and practical ministry.</p></article></div></section>
-<section id="programmes" class="section programmes"><div class="section-head"><div><span class="kicker">ACADEMIC PROGRAMMES</span><h2>Choose your pathway.</h2></div><div class="filters"><button class="active" data-filter="all">All</button><button data-filter="Certificate">Certificate</button><button data-filter="Diploma">Diploma</button><button data-filter="Bachelor">Bachelor</button><button data-filter="Masters">Masters</button><button data-filter="Doctoral">Ph.D.</button></div></div><div class="program-grid">
-<article class="program" data-level="Certificate"><span>01</span><h3>Certificate</h3><ul><li>Theology</li><li>Evangelism</li><li>Biblical Studies</li><li>School of Ministry</li></ul></article>
-<article class="program" data-level="Diploma"><span>02</span><h3>Diploma</h3><ul><li>Theology</li><li>Religious Studies</li><li>Pastoral Ministry</li><li>Church Administration & Management</li><li>Church Music</li><li>Christian Education</li></ul></article>
-<article class="program featured" data-level="Bachelor"><span>03</span><h3>Bachelor</h3><ul><li>B.A Theology</li><li>B.A Christian Education</li><li>B.A Christian Counseling</li><li>B.A Religious Studies</li><li>B.A Pastoral Ministry</li><li>B.A Christian Psychology</li><li>B.A Christian Journalism</li><li>B.A Church Administration & Management</li><li>B.A Youth & Children Ministry</li></ul></article>
-<article class="program" data-level="Masters"><span>04</span><h3>Masters</h3><ul><li>M.A Theology</li><li>M.A Christian Counseling</li><li>M.A Christian Psychology</li><li>M.A Missiology</li><li>M.A Divinity</li><li>M.A Chaplaincy Education</li><li>M.A New & Old Testament Studies</li><li>M.A Leadership & Administration</li><li>M.A Church History</li></ul></article>
-<article class="program" data-level="Doctoral"><span>05</span><h3>Doctoral Studies</h3><ul><li>Ph.D. Theology</li><li>Ph.D. Counseling & Psychology</li><li>Ph.D. Inter-religious Dialogue & Diplomacy</li><li>Ph.D. Christian Education</li><li>Ph.D. Philosophy & Apologetics</li><li>Ph.D. Church History</li></ul></article></div></section>
-<section id="leadership" class="section leader"><div class="leader-image"><img src="assets/leadership.jpg" alt="Prevailers Theological School leadership and community"></div><div class="leader-copy"><span class="kicker">LEADERSHIP</span><h2>A vision with a mission.</h2><h3>Apostle Dr. Caleb Lanshima Kave</h3><p>Founder and visionary of Prevailers Theological School, with a vision for developing Christian leaders and expanding access to theological education.</p><div class="signature">Developing Christian Leaders</div></div></section>
-<section id="campus" class="section campus"><div class="section-head"><div><span class="kicker">THE CAMPUS VISION</span><h2>Built for learning and impact.</h2></div><p>Proposed campus at Baltip, Shendam Road, Mikang LGA, Plateau State, Nigeria • 4 plots (200 ft × 400 ft) • target capacity up to 1,000 students.</p></div><div class="campus-grid"><figure><img src="assets/campus-plan.png" alt="Prevailers Theological School campus concept plan"><figcaption>Campus master concept</figcaption></figure><figure><img src="assets/admin-plan.png" alt="Administration building concept floor plan"><figcaption>Administration building concept</figcaption></figure></div></section>
-<section id="admission" class="admission"><div><span class="kicker">ADMISSIONS</span><h2>Your journey.<br>God’s purpose.</h2><p>Prepare today to impact tomorrow. Join a community committed to biblical knowledge, character, leadership and service.</p></div><div class="admission-card"><b>ADMISSION NOW OPEN</b><p>For enquiries and admission information</p><a class="phone" href="tel:+2347038544001">07038544001</a><a class="btn primary" href="tel:+2347038544001">Call the School</a></div></section>
-<section id="contact" class="section contact"><div><span class="kicker">CONTACT</span><h2>Let’s connect.</h2><p><b>Prevailers Theological School</b><br>FCT Abuja, Nigeria</p><p><a href="tel:+2347038544001">07038544001</a></p></div><form onsubmit="event.preventDefault(); alert('Thank you. Please call 07038544001 to complete your enquiry.');"><input required placeholder="Your name"><input required type="email" placeholder="Email address"><select><option>Admission enquiry</option><option>Programme information</option><option>Partnership</option></select><textarea required rows="4" placeholder="How can we help?"></textarea><button class="btn primary" type="submit">Send Enquiry</button></form></section>
-</main><footer><div class="brand foot"><img src="assets/logo.png" alt=""><span><b>PREVAILERS</b><small>THEOLOGICAL SCHOOL</small></span></div><p>Be the Light, in the Darkness.</p><small>© <span id="year"></span> Prevailers Theological School. All rights reserved.</small></footer><script src="script.js"></script></body></html>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<span class="eyebrow">Christian Leadership • Theology • Ministry</span>
+<h1>Developing <span>Christian Leaders</span></h1>
+<p>Flexible, affordable and effective theological education for people called to serve God, the Church and society.</p>
+<div class="actions">
+<a class="btn primary" href="#admissions">Admission Now Open</a>
+<a class="btn secondary" href="#programmes">Explore Programmes</a>
+</div>
+</div>
+<div class="poster"><img src="assets/admission-poster.png" alt="Prevailers Theological School admission poster"></div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about-grid">
+<div class="about-card">
+<div class="heading" style="text-align:left;margin:0 0 20px"><h2>Who We Are</h2><p>A school for faith, truth, excellence and service.</p></div>
+<p>Prevailers Theological School is a non-denominational open and distance learning institution dedicated to accessible theological education, Christian leadership development, research and practical ministry preparation.</p>
+<p>Established on <strong>22 December 2023</strong>, the School exists to provide opportunities for people aspiring to acquire sound theological knowledge and prepare for effective Christian service.</p>
+<p class="callout">Our vision is to produce Christian leaders who build the Body of Christ and become light in the darkness of the present age.</p>
+</div>
+<div class="about-card">
+<h3>Our Mission</h3>
+<p>To provide and raise a God-fearing generation committed to serving humanity through sound theological knowledge.</p>
+<p>Through <strong>teaching, research and manpower development</strong>, the School seeks to contribute to reformation and growth in the Body of Christ.</p>
+<h3>Founder & Visionary</h3>
+<p><strong>Apostle Dr. Caleb Lanshima Kave</strong></p>
+</div>
+</div>
+</section>
+
+<section class="light">
+<div class="container">
+<div class="heading"><h2>Why Study With Us?</h2><p>A flexible learning environment focused on theology, ministry and Christian leadership.</p></div>
+<div class="cards">
+<div class="card"><h3>Flexible Learning</h3><p>Open and distance learning designed for students balancing ministry, work and family responsibilities.</p></div>
+<div class="card"><h3>Sound Theology</h3><p>Programmes cover biblical studies, theology, ministry, counselling, Christian education and leadership.</p></div>
+<div class="card"><h3>Leadership Development</h3><p>Training connects theological knowledge with practical Christian service, research and leadership development.</p></div>
+</div>
+</div>
+</section>
+
+<section id="programmes">
+<div class="container">
+<div class="heading"><h2>Academic Programmes</h2><p>Choose a programme that matches your academic and ministry goals.</p></div>
+<div class="programmes">
+<div class="programme"><h3>Certificate</h3><ul><li>Theology</li><li>Evangelism</li><li>Biblical Studies</li><li>School of Ministry</li></ul></div>
+<div class="programme"><h3>Diploma</h3><ul><li>Theology</li><li>Religious Studies</li><li>Pastoral Ministry</li><li>Church Administration & Management</li><li>Church Music</li><li>Christian Education</li></ul></div>
+<div class="programme"><h3>Bachelor</h3><ul><li>B.A. Theology</li><li>Christian Education</li><li>Christian Counseling</li><li>Religious Studies</li><li>Pastoral Ministry</li><li>Christian Psychology</li><li>Christian Journalism</li><li>Church Administration & Management</li><li>Youth & Children Ministry</li></ul></div>
+<div class="programme"><h3>Masters</h3><ul><li>M.A. Theology</li><li>Christian Counseling</li><li>Christian Psychology</li><li>Missiology</li><li>Divinity</li><li>Chaplaincy Education</li><li>New & Old Testament Studies</li><li>Leadership & Administration</li><li>Church History</li></ul></div>
+<div class="programme"><h3>PhD</h3><ul><li>Ph.D. Theology</li><li>Counseling & Psychology</li><li>Inter-religious Dialogue & Diplomacy</li><li>Christian Education</li><li>Philosophy & Apologetics</li><li>Church History</li></ul></div>
+</div>
+</div>
+</section>
+
+<section class="quote"><div class="container"><h2>“Be the Light, in the Darkness.”</h2><p>Preparing Christian leaders to serve the Church and humanity with knowledge, character and purpose.</p></div></section>
+
+<section id="admissions" class="light">
+<div class="container admission-grid">
+<div>
+<div class="heading" style="text-align:left;margin:0 0 20px"><h2>Admissions</h2><p>Take the next step toward theological education and Christian leadership.</p></div>
+<p><strong>Admission is now open.</strong></p>
+<p>For admission enquiries, call <strong>07038544001</strong> or send a WhatsApp message.</p>
+<a class="btn primary" href="https://wa.me/2347038544001?text=Hello%20Prevailers%20Theological%20School,%20I%20would%20like%20to%20make%20an%20admission%20enquiry." target="_blank" rel="noopener">Message Admissions on WhatsApp</a>
+</div>
+<div class="formbox">
+<h3 style="color:var(--navy);margin-top:0">Admission / Enquiry Form</h3>
+<form onsubmit="sendEnquiry(event)">
+<label for="name">Full Name</label><input id="name" required>
+<label for="phone">Phone Number</label><input id="phone" type="tel" required>
+<label for="programme">Programme</label>
+<select id="programme"><option>Certificate</option><option>Diploma</option><option>Bachelor</option><option>Masters</option><option>PhD</option></select>
+<label for="message">Message</label><textarea id="message" placeholder="Tell us what you would like to know..."></textarea>
+<button class="btn primary" type="submit">Send Enquiry</button>
+</form>
+</div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<div class="heading"><h2>School & Admission Gallery</h2><p>Highlights and information from Prevailers Theological School.</p></div>
+<div class="gallery"><img src="assets/admission-poster.png" alt="Prevailers Theological School admission poster"></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+<div class="heading"><h2>Contact Us</h2><p>Connect with Prevailers Theological School.</p></div>
+<div class="contact-grid">
+<div class="contact-card"><h3>Phone</h3><p><a href="tel:+2347038544001">07038544001</a></p><p>Admissions and general enquiries.</p></div>
+<div class="contact-card"><h3>Location</h3><p>FCT Abuja, Nigeria</p><p>Contact the School for current office and programme information.</p></div>
+<div class="contact-card"><h3>WhatsApp</h3><p>Send an enquiry directly to the admissions team.</p><a class="btn primary" href="https://wa.me/2347038544001" target="_blank" rel="noopener">Open WhatsApp</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<a class="wa" href="https://wa.me/2347038544001?text=Hello%20Prevailers%20Theological%20School,%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp</a>
+
+<footer>
+<div class="container footer-grid">
+<div><h3>Prevailers Theological School</h3><p>Open and distance-learning theological education for Christian leaders.</p><p><strong>Be the Light, in the Darkness.</strong></p></div>
+<div><h3>Quick Links</h3><p><a href="#about">About</a></p><p><a href="#programmes">Programmes</a></p><p><a href="#admissions">Admissions</a></p><p><a href="#contact">Contact</a></p></div>
+<div><h3>Contact</h3><p><a href="tel:+2347038544001">07038544001</a></p><p>FCT Abuja, Nigeria</p></div>
+</div>
+<div class="container copy">© 2026 Prevailers Theological School. All rights reserved.</div>
+</footer>
+
+<script>
+function sendEnquiry(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value.trim();
+ const p=document.getElementById('phone').value.trim();
+ const pr=document.getElementById('programme').value;
+ const m=document.getElementById('message').value.trim();
+ const text=`Hello Prevailers Theological School,%0A%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0AProgramme: ${encodeURIComponent(pr)}%0A%0AEnquiry: ${encodeURIComponent(m)}`;
+ window.open(`https://wa.me/2347038544001?text=${text}`,'_blank');
+}
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+</script>
+</body>
+</html>
